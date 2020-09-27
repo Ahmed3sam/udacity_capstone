@@ -36,7 +36,7 @@ pipeline {
 				withAWS(region:'us-east-2', credentials:'udacity-capstone') {
 					sh '''
 					    aws --region us-east-2 eks update-kubeconfig --name BlueGreen-Prod
-						kubectl config use-context arn:aws:eks:us-east-2:310127359710:cluster/BlueGreen-Prod
+						/usr/local/bin/kubectl config use-context arn:aws:eks:us-east-2:310127359710:cluster/BlueGreen-Prod
 					'''
 				}
 			}
