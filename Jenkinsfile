@@ -14,7 +14,7 @@ pipeline {
 					sh '''
 						docker build -t udacity-capstone .
 					'''
-				}
+				
 			}
 		}
 
