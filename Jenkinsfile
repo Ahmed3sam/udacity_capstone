@@ -14,7 +14,7 @@ pipeline {
 				withCredentials([usernamePassword(credentialsId: 'dockerhub_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
 				
 					sh '''
-						docker build -t udacity-capstone .
+						docker build -t ahmed3sam/udacity-capstone .
 					'''
 				}
 			}
@@ -25,7 +25,7 @@ pipeline {
 				withCredentials([usernamePassword(credentialsId: 'dockerhub_id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
 					sh '''
 						docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-						docker push udacity-capstone
+						docker push ahmed3sam/udacity-capstone
 					'''
 				}
 			}
